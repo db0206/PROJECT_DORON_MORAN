@@ -36,6 +36,7 @@ public class ConnectionPool {
     }
 
     public static ConnectionPool getInstance(){
+        //Connection Pool Singleton
         if (instance==null){
             synchronized (ConnectionPool.class){
                 if(instance==null){

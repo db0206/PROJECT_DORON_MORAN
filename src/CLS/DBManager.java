@@ -9,4 +9,6 @@ public class DBManager {
 
     //DataBase
     public static final String DB = "project_doron_moran";
+
+    //CRUD
 }
