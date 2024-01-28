@@ -60,7 +60,7 @@ public class ConnectionPool {
         }
     }
 
-    public void returnConnection(Connection connection){
+    public void restoreConnection(Connection connection){
         synchronized (connections){
             connections.push(connection);
             //notify that we got back a connection for the user
