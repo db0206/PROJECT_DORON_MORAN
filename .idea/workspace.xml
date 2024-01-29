@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="CompaniesDBDAO">
+    <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="Tester try">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CLS/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CLS/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +99,14 @@
       <option name="project" value="LOCAL‎" />
       <updated>1706537450384</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL‎-00004" summary="Tester try">
+      <created>1706538498249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL‎-00004" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1706538498249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +124,7 @@
     <MESSAGE value="NOTES" />
     <MESSAGE value="companiesDAO" />
     <MESSAGE value="CompaniesDBDAO" />
-    <option name="LAST_COMMIT_MESSAGE" value="CompaniesDBDAO" />
+    <MESSAGE value="Tester try" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tester try" />
   </component>
 </project>

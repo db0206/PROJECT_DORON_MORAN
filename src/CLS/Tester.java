@@ -14,7 +14,7 @@ public class Tester {
         Coupon coupon = new Coupon(1,2, ,"camera","buy the camera fifty percent off", LocalDate.now(), LocalDate.now(),10,20.99,"this image" );
 
 
-        System.out.println("============MORAN-TRY============");
+        System.out.println("=================================");
 
         Company company1 = new Company(01, "MDK", "mdk@gmail.com", "MDK1234");
         System.out.println(company1);
