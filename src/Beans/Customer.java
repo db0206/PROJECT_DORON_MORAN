@@ -89,8 +89,8 @@ public class Customer {
                 '}';
     }
 
-    public void addCoupon(Coupon coupon) {
-        coupons.add(coupon);
-    }
+//    public void addCoupon(Coupon coupon) {
+//        coupons.add(coupon);
+//    }
 
 }

@@ -75,9 +75,9 @@ public class Company {
                 '}';
     }
 
-    public void addCoupon(Coupon coupon) {
-        coupons.add(coupon);
-    }
+//    public void addCoupon(Coupon coupon) {
+//        coupons.add(coupon);
+//    }
 
 
 }
