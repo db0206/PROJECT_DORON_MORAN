@@ -1,7 +1,7 @@
 package DAO;
 
 import Beans.Company;
-import CLS.ConnectionPool;
+import DataBase.ConnectionPool;
 
 import java.util.ArrayList;
 

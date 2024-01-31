@@ -1,19 +1,14 @@
-package CLS;
-
-import Beans.Category;
-import Beans.Company;
-import Beans.Coupon;
-import Beans.Customer;
-
-import java.time.LocalDate;
+package DataBase;
 
 public class Tester {
 
     public static void main(String[] args) {
 
-        Coupon coupon = new Coupon(1,2, ,"camera","buy the camera fifty percent off", LocalDate.now(), LocalDate.now(),10,20.99,"this image" );
+        DBManager.createTable();
 
+      //  Coupon coupon = new Coupon(1,2, ,"camera","buy the camera fifty percent off", LocalDate.now(), LocalDate.now(),10,20.99,"this image" );
 
+/*
         System.out.println("=================================");
 
         Company company1 = new Company(01, "MDK", "mdk@gmail.com", "MDK1234");
@@ -40,6 +35,6 @@ public class Tester {
 
 
 
-
+*/
     }
 }
