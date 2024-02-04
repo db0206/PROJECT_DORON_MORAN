@@ -3,8 +3,12 @@ package DataBase;
 public class Tester {
 
     public static void main(String[] args) {
-
-        DBManager.createTable();
+        DBManager.createSchema();
+     /*  DBManager.createTable(DBManager.CREATE_TABLE_COMPANIES);
+        DBManager.createTable(DBManager.CREATE_TABLE_CATEGORIES);
+        DBManager.createTable(DBManager.CREATE_TABLE_CUSTOMERS);
+        DBManager.createTable(DBManager.CREATE_TABLE_COUPONS);
+        DBManager.createTable(DBManager.CREATE_TABLE_CUSTOMERS_VS_COUPONS);
 
       //  Coupon coupon = new Coupon(1,2, ,"camera","buy the camera fifty percent off", LocalDate.now(), LocalDate.now(),10,20.99,"this image" );
 
