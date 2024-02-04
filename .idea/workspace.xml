@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="TeamUpdate">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Tester.java" afterDir="false" />
@@ -37,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/User/PROJECT_DORON_MORAN"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/PROJECT_DORON_MORAN&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.DataBase.Tester">
     <configuration name="DataBase.Tester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DataBase.Tester" />
@@ -99,8 +98,20 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="NOTES" />
-    <option name="LAST_COMMIT_MESSAGE" value="NOTES" />
+    <MESSAGE value="TeamUpdate" />
+    <option name="LAST_COMMIT_MESSAGE" value="TeamUpdate" />
   </component>
 </project>

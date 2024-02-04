@@ -13,7 +13,7 @@ public class DBManager {
     public static final String SQL_PASS = "12345678";
 
     //DataBase
-    public static final String DB = "project_doron_moran";
+    public static final String DB = "anything_we_want";
 
     public static final String CREATE_SCHEMA = "CREATE SCHEMA IF NOT EXISTS `" + DB + "` ;";
     public static final String CREATE_TABLE_COMPANIES = "CREATE TABLE IF NOT EXISTS `" + DB + "`.`companies` (" +
@@ -45,8 +45,8 @@ public class DBManager {
             " `CATEGORY_ID` INT NOT NULL," +
             " `TITLE` VARCHAR(45) NOT NULL," +
             " `DESCRIPTION` VARCHAR(45) NOT NULL," +
-            " `START_DATE` DATETIME() NOT NULL," +
-            " `END_DATE` DATETIME() NOT NULL," +
+            " `START_DATE` DATE NOT NULL," +
+            " `END_DATE` DATE NOT NULL," +
             " `AMOUNT` INT NULL," +
             " `PRICE` DECIMAL NOT NULL," +
             " `IMAGE` VARCHAR(45) NOT NULL," +
@@ -60,6 +60,14 @@ public class DBManager {
 
     //CRUD
 
+    public static void createDataBase(){
+        createSchema();
+        createTable(DBManager.CREATE_TABLE_COMPANIES);
+        createTable(DBManager.CREATE_TABLE_CATEGORIES);
+        createTable(DBManager.CREATE_TABLE_CUSTOMERS);
+        createTable(DBManager.CREATE_TABLE_COUPONS);
+        createTable(DBManager.CREATE_TABLE_CUSTOMERS_VS_COUPONS);
+    }
     public static void createSchema() {
         Connection connection = null;
         try {
