@@ -32,7 +32,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
         }
 
         @Override
-        public void deleteCompany ( int companyID){
+        public void deleteCompany (int companyID){
 
         }
 

@@ -62,27 +62,21 @@ public class DBManager {
 
     public static void createDataBase(){
         createSchema();
-        createTable(DBManager.CREATE_TABLE_COMPANIES);
-        createTable(DBManager.CREATE_TABLE_CATEGORIES);
-        createTable(DBManager.CREATE_TABLE_CUSTOMERS);
-        createTable(DBManager.CREATE_TABLE_COUPONS);
-        createTable(DBManager.CREATE_TABLE_CUSTOMERS_VS_COUPONS);
+        createTable(CREATE_TABLE_COMPANIES);
+        createTable(CREATE_TABLE_CATEGORIES);
+        createTable(CREATE_TABLE_CUSTOMERS);
+        createTable(CREATE_TABLE_COUPONS);
+        createTable(CREATE_TABLE_CUSTOMERS_VS_COUPONS);
     }
     public static void createSchema() {
-        Connection connection = null;
-        try {
-            connection = ConnectionPool.getInstance().getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(CREATE_SCHEMA);
-            preparedStatement.execute();
-        } catch (InterruptedException | SQLException e) {
-            System.out.println(e.getMessage());
-            ;
-        } finally {
-            ConnectionPool.getInstance().restoreConnection(connection);
-        }
+       createX(CREATE_SCHEMA);
     }
 
     public static void createTable(String str) {
+        createX(str);
+    }
+
+    public static void createX (String str){
         Connection connection = null;
         try {
             connection = ConnectionPool.getInstance().getConnection();
