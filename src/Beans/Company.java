@@ -68,6 +68,10 @@ public class Company {
         this.coupons = coupons;
     }
 
+    public static int getCounter() {
+        return counter;
+    }
+
     @Override
     public String toString() {
         return "Company{" +

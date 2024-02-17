@@ -107,8 +107,10 @@ public class DBManager {
     public static final String ADD_CUSTOMER = "INSERT INTO " + DB + ".`customers` " +
             "(first_name,last_name,email,password) VALUES(?,?,?,?)";
 
-    public static final String ADD_COUPON = "INSERT INTO "+ DB + ".`coupons` " +
+    public static final String ADD_COUPON = "INSERT INTO " + DB + ".`coupons` " +
             "(company_id,category_id,title,description,start_date,end_date,amount,price,image) " +
             "VALUES(?,?,?,?,?,?,?,?,?)";
+
+    public static final String DELETE_COMPANY = "DELETE FROM " + DB + ".`companies` WHERE (`ID` = '?')";
 
 }

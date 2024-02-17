@@ -41,6 +41,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
             } finally {
                 connectionPool.restoreConnection(connection);
             }
+
         }
 
         @Override
@@ -50,7 +51,19 @@ public class CompaniesDBDAO implements CompaniesDAO {
 
         @Override
         public void deleteCompany (int companyID){
+            Connection connection = null;
 
+            try {
+                connection = connectionPool.getConnection();
+                PreparedStatement preparedStatement =
+                       connection.prepareStatement("DELETE FROM " + DBManager.DB
+                                + ".`companies` WHERE (`ID` = '"+companyID+"')");
+                preparedStatement.execute();
+            } catch (InterruptedException | SQLException e) {
+                System.out.println(e.getMessage());
+            } finally {
+                connectionPool.restoreConnection(connection);
+            }
         }
 
         @Override

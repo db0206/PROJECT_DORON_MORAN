@@ -49,7 +49,19 @@ public class CouponsDBDAO implements CouponsDAO{
 
     @Override
     public void deleteCoupon(int couponID) {
+        Connection connection = null;
 
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement =
+                    connection.prepareStatement("DELETE FROM " + DBManager.DB
+                            + ".`coupons` WHERE (`ID` = '"+couponID+"')");
+            preparedStatement.execute();
+        } catch (InterruptedException | SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            connectionPool.restoreConnection(connection);
+        }
     }
 
     @Override

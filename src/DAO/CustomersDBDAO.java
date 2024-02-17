@@ -48,7 +48,19 @@ public class CustomersDBDAO implements CustomersDAO{
 
     @Override
     public void deleteCustomer(int customerID) {
+        Connection connection = null;
 
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement =
+                    connection.prepareStatement("DELETE FROM " + DBManager.DB
+                            + ".`customers` WHERE (`ID` = '"+customerID+"')");
+            preparedStatement.execute();
+        } catch (InterruptedException | SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            connectionPool.restoreConnection(connection);
+        }
     }
 
     @Override

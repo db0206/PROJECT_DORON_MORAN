@@ -27,13 +27,11 @@ public class Tester {
 
         Coupon coupon = new Coupon(1, Category.MOVIES,"1+1","Get one ticket for free", LocalDate.now(),LocalDate.of(2024,6,24),10,20.0,"image");
 
-
         companiesDBDAO.addCompany(company);
         companiesDBDAO.addCompany(company2);
-        customersDBDAO.addCustomer(customer);
-        couponsDBDAO.addCoupon(coupon);
 
-
+        System.out.println(company.getId());
+        System.out.println(company2.getId());
 
     }
 }
