@@ -2,7 +2,11 @@ package DAO;
 
 import Beans.Company;
 import DataBase.ConnectionPool;
+import DataBase.DBManager;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CompaniesDBDAO implements CompaniesDAO {
@@ -23,7 +27,20 @@ public class CompaniesDBDAO implements CompaniesDAO {
 
         @Override
         public void addCompany (Company company){
+            Connection connection = null;
 
+            try {
+                connection = connectionPool.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(DBManager.ADD_COMPANY);
+                preparedStatement.setString(1, company.getName());
+                preparedStatement.setString(2, company.getEmail());
+                preparedStatement.setString(3, company.getPassword());
+                preparedStatement.execute();
+            } catch (InterruptedException | SQLException e) {
+                System.out.println(e.getMessage());
+            } finally {
+                connectionPool.restoreConnection(connection);
+            }
         }
 
         @Override

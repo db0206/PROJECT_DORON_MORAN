@@ -14,11 +14,12 @@ public class Coupon {
     private int amount;
     private double price;
     private String image;
+    private static int counter = 1;
 
-    public Coupon(int id, int companyID, Category category, String title,
+    public Coupon(int companyID, Category category, String title,
                   String description, LocalDate startDate, LocalDate endDate,
                   int amount, double price, String image) {
-        this.id = id;
+        this.id = counter;
         this.companyID = companyID;
         this.category = category;
         this.title = title;
@@ -28,6 +29,7 @@ public class Coupon {
         this.amount = amount;
         this.price = price;
         this.image = image;
+        counter++;
     }
 
     public int getId() {

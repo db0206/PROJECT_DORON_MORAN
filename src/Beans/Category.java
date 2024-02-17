@@ -8,6 +8,10 @@ public enum Category {
 
     private int id;
 
+    public int getId() {
+        return id;
+    }
+
     private Category (int id){
         this.id =id;
     }

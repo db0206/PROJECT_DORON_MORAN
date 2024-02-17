@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="TeamUpdate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Coupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Coupon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Tester.java" afterDir="false" />
     </list>
@@ -17,6 +24,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -102,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706276400452</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="TeamUpdate">
+      <option name="closed" value="true" />
+      <created>1707509918080</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707509918080</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TeamUpdate">
+      <option name="closed" value="true" />
+      <created>1707511547132</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707511547132</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

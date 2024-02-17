@@ -11,25 +11,28 @@ public class Customer {
     private String email;
     private String password;
     private List<Coupon> coupons;
+    private static int counter = 1;
 
-    public Customer(int id, String firstName, String lastName, String email,
+    public Customer(String firstName, String lastName, String email,
                     String password, List<Coupon> coupons) {
-        this.id = id;
+        this.id = counter;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.coupons = new ArrayList<>();
+        this.coupons = coupons;
+        counter++;
     }
 
-    public Customer(int id, String firstName, String lastName, String email,
+    public Customer(String firstName, String lastName, String email,
                     String password) {
-        this.id = id;
+        this.id = counter;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.coupons = new ArrayList<>();
+        counter++;
     }
 
     public int getId() {

@@ -9,22 +9,26 @@ public class Company {
     private String email;
     private String password;
     private List<Coupon> coupons;
+    private static int counter = 1;
 
-    public Company(int id, String name, String email,
+
+    public Company(String name, String email,
                    String password) {
-        this.id = id;
+        this.id = counter;
         this.name = name;
         this.email = email;
         this.password = password;
         this.coupons = new ArrayList<>();
+        counter++;
     }
-    public Company(int id, String name, String email,
+    public Company(String name, String email,
                    String password, List<Coupon> coupons) {
-        this.id = id;
+        this.id = counter;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.coupons = new ArrayList<>();
+        this.coupons = coupons;
+        counter++;
     }
 
     public int getId() {
