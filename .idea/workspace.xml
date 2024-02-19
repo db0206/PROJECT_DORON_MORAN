@@ -7,9 +7,6 @@
     <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="ADD Coupon, Add Customer, ADD COMPANY">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

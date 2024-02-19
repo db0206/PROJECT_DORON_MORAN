@@ -35,6 +35,8 @@ public class Tester {
         company.setEmail("b??");
         company.setPassword("blahblah millie blah");
 
+        company2.setEmail("bbbbb");
+
         customer.setEmail("sfsdf");
         customer.setFirstName("Adam");
 
