@@ -1,5 +1,6 @@
 package DAO;
 
+import Beans.Company;
 import Beans.Customer;
 import DataBase.ConnectionPool;
 import DataBase.DBManager;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 public class CustomersDBDAO implements CustomersDAO{
 
     private ConnectionPool connectionPool;
+    private static ArrayList<Customer> customers = new ArrayList<>();
 
     public CustomersDBDAO(ConnectionPool connectionPool) {
         this.connectionPool = connectionPool;
@@ -19,7 +21,13 @@ public class CustomersDBDAO implements CustomersDAO{
 
     @Override
     public boolean isCustomerExists(String email, String password) {
-        return false;
+        boolean result = false;
+        for (Customer customer:customers){
+            if (email.equals(customer.getEmail()) && password.equals(customer.getPassword())){
+                result = true;
+            }
+        }
+        return result;
     }
 
     @Override
@@ -34,6 +42,7 @@ public class CustomersDBDAO implements CustomersDAO{
             preparedStatement.setString(3, customer.getEmail());
             preparedStatement.setString(4, customer.getPassword());
             preparedStatement.execute();
+            customers.add(customer);
         } catch (InterruptedException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -72,6 +81,7 @@ public class CustomersDBDAO implements CustomersDAO{
                     connection.prepareStatement("DELETE FROM " + DBManager.DB
                             + ".`customers` WHERE (`ID` = '"+customerID+"')");
             preparedStatement.execute();
+            removeCustomerFromList(customerID);
         } catch (InterruptedException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -79,13 +89,29 @@ public class CustomersDBDAO implements CustomersDAO{
         }
     }
 
+    private void removeCustomerFromList(int customerID) {
+        for (Customer customer:customers){
+            if (customerID == customer.getId()){
+                customers.remove(customer);
+                break;
+            }
+        }
+    }
+
     @Override
     public ArrayList<Customer> getAllCustomers() {
-        return null;
+        return customers;
     }
 
     @Override
     public Customer getOneCustomer(int customerID) {
-        return null;
+        Customer desiredCustomer = null;
+        for (Customer customer : customers) {
+            if (customerID == customer.getId()) {
+                desiredCustomer = customer;
+                break;
+            }
+        }
+        return desiredCustomer;
     }
 }

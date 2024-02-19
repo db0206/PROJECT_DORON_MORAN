@@ -19,4 +19,5 @@ public interface CompaniesDAO {
 
     public Company getOneCompany (int companyID);
 
+
 }

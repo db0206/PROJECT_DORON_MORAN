@@ -96,11 +96,35 @@ public class CouponsDBDAO implements CouponsDAO{
 
     @Override
     public void addCouponPurchase(int customerID, int couponID) {
+        Connection connection = null;
 
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(DBManager.ADD_CUSTOMER_VS_COUPON);
+            preparedStatement.setInt(1,customerID);
+            preparedStatement.setInt(2, couponID);
+            preparedStatement.execute();
+        } catch (InterruptedException | SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            connectionPool.restoreConnection(connection);
+        }
     }
 
     @Override
     public void deleteCouponPurchase(int customerID, int couponID) {
+        Connection connection = null;
 
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement =
+                    connection.prepareStatement("DELETE FROM " + DBManager.DB + ".`customers_vs_coupons` " +
+                            "WHERE (`CUSTOMER_ID` = '"+customerID+"') and (`COUPON_ID` = '"+couponID+"')");
+            preparedStatement.execute();
+        } catch (InterruptedException | SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            connectionPool.restoreConnection(connection);
+        }
     }
 }

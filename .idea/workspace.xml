@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="ADD Coupon, Add Customer, ADD COMPANY">
+      <change afterPath="$PROJECT_DIR$/src/Facade/ClientFacade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Facade/CompanyFacade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DBManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataBase/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,16 +168,5 @@
     <MESSAGE value="TeamUpdate" />
     <MESSAGE value="ADD Coupon, Add Customer, ADD COMPANY" />
     <option name="LAST_COMMIT_MESSAGE" value="ADD Coupon, Add Customer, ADD COMPANY" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/DAO/CouponsDBDAO.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

@@ -24,7 +24,14 @@ public class CompaniesDBDAO implements CompaniesDAO {
     // Implement methods from CompaniesDAO interface
     @Override
     public boolean isCompanyExists(String email, String password) {
-        return false;
+        boolean result = false;
+        for (Company company : companies) {
+            if (email.equals(company.getEmail()) && password.equals(company.getPassword())) {
+                result = true;
+                break;
+            }
+        }
+        return result;
     }
 
     @Override
@@ -38,6 +45,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
             preparedStatement.setString(2, company.getEmail());
             preparedStatement.setString(3, company.getPassword());
             preparedStatement.execute();
+            companies.add(company);
         } catch (InterruptedException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {
@@ -75,10 +83,20 @@ public class CompaniesDBDAO implements CompaniesDAO {
                     connection.prepareStatement("DELETE FROM " + DBManager.DB
                             + ".`companies` WHERE (`ID` = '" + companyID + "')");
             preparedStatement.execute();
+            removeCompanyFromList(companyID);
         } catch (InterruptedException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {
             connectionPool.restoreConnection(connection);
+        }
+    }
+
+    private void removeCompanyFromList(int companyID) {
+        for (Company company:companies){
+            if (companyID == company.getId()){
+                companies.remove(company);
+                break;
+            }
         }
     }
 
@@ -89,13 +107,13 @@ public class CompaniesDBDAO implements CompaniesDAO {
 
     @Override
     public Company getOneCompany(int companyID) {
-      Company desiredCompany = null;
-       for(Company company:companies){
-           if (companyID == company.getId()) {
-               desiredCompany = company;
-               break;
-           }
-       }
+        Company desiredCompany = null;
+        for (Company company : companies) {
+            if (companyID == company.getId()) {
+                desiredCompany = company;
+                break;
+            }
+        }
         return desiredCompany;
     }
 

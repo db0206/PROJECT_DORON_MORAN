@@ -111,6 +111,9 @@ public class DBManager {
             "(company_id,category_id,title,description,start_date,end_date,amount,price,image) " +
             "VALUES(?,?,?,?,?,?,?,?,?)";
 
+    public static final String ADD_CUSTOMER_VS_COUPON = "INSERT INTO " + DB + ".`customers_vs_coupons` " +
+            "(customer_id,coupon_id) VALUES(?,?)";
+
     public static final String DELETE_COMPANY = "DELETE FROM " + DB + ".`companies` WHERE (`ID` = '?')";
 
 }
