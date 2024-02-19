@@ -85,8 +85,8 @@ public class DBManager {
             " `CATEGORY_ID` INT NOT NULL," +
             " `TITLE` VARCHAR(45) NOT NULL," +
             " `DESCRIPTION` VARCHAR(45) NOT NULL," +
-            " `START_DATE` DATE NOT NULL," +
-            " `END_DATE` DATE NOT NULL," +
+            " `START_DATE` DATETIME NOT NULL," +
+            " `END_DATE` DATETIME NOT NULL," +
             " `AMOUNT` INT NULL," +
             " `PRICE` DECIMAL NOT NULL," +
             " `IMAGE` VARCHAR(45) NOT NULL," +

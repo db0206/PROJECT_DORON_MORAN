@@ -26,12 +26,24 @@ public class Tester {
         Customer customer = new Customer("Doron", "Berger", "doronbrgr@gmail.com", "MillieB0423");
 
         Coupon coupon = new Coupon(1, Category.MOVIES,"1+1","Get one ticket for free", LocalDate.now(),LocalDate.of(2024,6,24),10,20.0,"image");
-
+/*
         companiesDBDAO.addCompany(company);
         companiesDBDAO.addCompany(company2);
+        customersDBDAO.addCustomer(customer);
+        couponsDBDAO.addCoupon(coupon);
+        */
+        company.setEmail("b??");
+        company.setPassword("blahblah millie blah");
 
-        System.out.println(company.getId());
-        System.out.println(company2.getId());
+        customer.setEmail("sfsdf");
+        customer.setFirstName("Adam");
+
+        coupon.setAmount(100);
+
+        companiesDBDAO.updateCompany(company);
+        customersDBDAO.updateCustomer(customer);
+        couponsDBDAO.updateCoupon(coupon);
+
 
     }
 }

@@ -44,7 +44,27 @@ public class CouponsDBDAO implements CouponsDAO{
 
     @Override
     public void updateCoupon(Coupon coupon) {
+        Connection connection = null;
 
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement =
+                    connection.prepareStatement("UPDATE " + DBManager.DB
+                            + ".`coupons` SET `CATEGORY_ID` = '"+coupon.getCategory().getId()+"', " +
+                            "`TITLE` = '"+coupon.getTitle()+"', " +
+                            "`DESCRIPTION` = '"+coupon.getDescription()+"', " +
+                            "`START_DATE` = '"+Date.valueOf(coupon.getStartDate())+"', " +
+                            "`END_DATE` = '"+Date.valueOf(coupon.getEndDate())+"', " +
+                            "`AMOUNT` = '"+coupon.getAmount()+"', " +
+                            "`PRICE` = '"+coupon.getPrice()+"', " +
+                            "`IMAGE` = '"+coupon.getImage()+"' " +
+                            "WHERE (`ID` = '"+coupon.getId()+"')");
+            preparedStatement.execute();
+        } catch (InterruptedException | SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            connectionPool.restoreConnection(connection);
+        }
     }
 
     @Override

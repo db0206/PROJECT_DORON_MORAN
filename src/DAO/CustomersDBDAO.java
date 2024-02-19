@@ -43,7 +43,23 @@ public class CustomersDBDAO implements CustomersDAO{
 
     @Override
     public void updateCustomer(Customer customer) {
+        Connection connection = null;
 
+        try {
+            connection = connectionPool.getConnection();
+            PreparedStatement preparedStatement =
+                    connection.prepareStatement("UPDATE " + DBManager.DB
+                            + ".`customers` SET `FIRST_NAME` = '"+customer.getFirstName()+"', " +
+                            "`LAST_NAME` = '"+customer.getLastName()+"', " +
+                            "`EMAIL` = '"+customer.getEmail()+"', " +
+                            "`PASSWORD` = '"+customer.getPassword()+"' " +
+                            "WHERE (`ID` = '"+customer.getId()+"')");
+            preparedStatement.execute();
+        } catch (InterruptedException | SQLException e) {
+            System.out.println(e.getMessage());
+        } finally {
+            connectionPool.restoreConnection(connection);
+        }
     }
 
     @Override

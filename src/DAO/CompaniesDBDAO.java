@@ -46,7 +46,21 @@ public class CompaniesDBDAO implements CompaniesDAO {
 
         @Override
         public void updateCompany (Company company){
+            Connection connection = null;
 
+            try {
+                connection = connectionPool.getConnection();
+                PreparedStatement preparedStatement =
+                        connection.prepareStatement("UPDATE " + DBManager.DB
+                                + ".`companies` SET `EMAIL` = '"+company.getEmail()+"', " +
+                                "`PASSWORD` = '"+company.getPassword()+"' " +
+                                "WHERE (`ID` = '"+company.getId()+"')");
+                preparedStatement.execute();
+            } catch (InterruptedException | SQLException e) {
+                System.out.println(e.getMessage());
+            } finally {
+                connectionPool.restoreConnection(connection);
+            }
         }
 
         @Override
