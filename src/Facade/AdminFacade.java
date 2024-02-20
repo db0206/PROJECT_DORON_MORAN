@@ -2,17 +2,19 @@ package Facade;
 
 import Beans.Company;
 import Beans.Customer;
+import Login.LoginManager;
 
 import java.util.ArrayList;
 
 public class AdminFacade extends ClientFacade{
 
     public AdminFacade() {
+        System.out.println("Welcome Admin!");
     }
 
     @Override
     public boolean login(String email, String password) {
-        return email.equals("admin@admin.com") && password.equals("admin");
+        return LoginManager.adminLogin(email, password);
     }
 
     public void addCompany(Company company){

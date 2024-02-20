@@ -3,6 +3,8 @@ package Facade;
 import Beans.Category;
 import Beans.Company;
 import Beans.Coupon;
+import DataBase.UserLists;
+import Login.LoginManager;
 
 import java.util.ArrayList;
 
@@ -11,6 +13,7 @@ public class CompanyFacade extends ClientFacade{
     private int companyID;
 
     public CompanyFacade(int companyID) {
+        System.out.println("Welcome Company!");
         this.companyID = companyID;
     }
 
@@ -20,12 +23,12 @@ public class CompanyFacade extends ClientFacade{
 
     @Override
     public boolean login(String email, String password) {
-        return companiesDAO.isCompanyExists(email, password);
+        return LoginManager.companyLogin(email, password);
     }
 
-    public int getIdThroughLogin(String email, String password){
+    public static int getIdThroughLogin(String email, String password){
         int id = 0;
-        for (Company company:companiesDAO.getAllCompanies()){
+        for (Company company: UserLists.getAllCompanies()){
             if (company.getEmail().equals(email) && company.getPassword().equals(password)){
                id = company.getId();
             }

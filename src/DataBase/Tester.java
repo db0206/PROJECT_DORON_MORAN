@@ -9,6 +9,8 @@ import DAO.CompaniesDBDAO;
 import DAO.CouponsDBDAO;
 import DAO.CustomersDBDAO;
 import Facade.CompanyFacade;
+import Login.ClientType;
+import Login.LoginManager;
 
 import java.time.LocalDate;
 
@@ -27,9 +29,12 @@ public class Tester {
 
         Coupon coupon = new Coupon(1, Category.MOVIES,"1+1","Get one ticket for free", LocalDate.now(),LocalDate.of(2024,6,24),10,20.0,"image");
 
+        companiesDAO.addCompany(company);
+        companiesDAO.addCompany(company2);
 
+        LoginManager loginManager = LoginManager.getInstance();
 
-        System.out.println(companyFacade.login("doronbrgr@yahoo.com", "maiden666"));
+        System.out.println(loginManager.login(company.getEmail(), company.getPassword(), ClientType.Company));
 
     }
 }

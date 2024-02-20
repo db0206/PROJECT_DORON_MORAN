@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="end of DAO, start of Facade">
-      <change afterPath="$PROJECT_DIR$/src/Login/ClientType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Login/LoginManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataBase/UserLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facade/AdminFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facade/AdminFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facade/CompanyFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facade/CompanyFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Facade/CustomerFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Facade/CustomerFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/LoginManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/LoginManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708376798000</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="end of DAO, start of Facade">
+      <option name="closed" value="true" />
+      <created>1708404599620</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708404599620</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

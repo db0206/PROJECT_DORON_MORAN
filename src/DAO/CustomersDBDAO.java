@@ -4,6 +4,7 @@ import Beans.Company;
 import Beans.Customer;
 import DataBase.ConnectionPool;
 import DataBase.DBManager;
+import DataBase.UserLists;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class CustomersDBDAO implements CustomersDAO{
-
+//TODO: update all the methods to include UserLists
     private ConnectionPool connectionPool;
     private static ArrayList<Customer> customers = new ArrayList<>();
 
@@ -42,7 +43,7 @@ public class CustomersDBDAO implements CustomersDAO{
             preparedStatement.setString(3, customer.getEmail());
             preparedStatement.setString(4, customer.getPassword());
             preparedStatement.execute();
-            customers.add(customer);
+            UserLists.getAllCustomers().add(customer);
         } catch (InterruptedException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {

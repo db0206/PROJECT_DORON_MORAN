@@ -3,6 +3,7 @@ package DAO;
 import Beans.Company;
 import DataBase.ConnectionPool;
 import DataBase.DBManager;
+import DataBase.UserLists;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class CompaniesDBDAO implements CompaniesDAO {
 
-
+    //TODO: update all the methods to include UserLists
     private ConnectionPool connectionPool;
     private static ArrayList<Company> companies = new ArrayList<>();
 
@@ -45,7 +46,7 @@ public class CompaniesDBDAO implements CompaniesDAO {
             preparedStatement.setString(2, company.getEmail());
             preparedStatement.setString(3, company.getPassword());
             preparedStatement.execute();
-            companies.add(company);
+            UserLists.getAllCompanies().add(company);
         } catch (InterruptedException | SQLException e) {
             System.out.println(e.getMessage());
         } finally {
