@@ -11,7 +11,6 @@ public class CompanyFacade extends ClientFacade{
     private int companyID;
 
     public CompanyFacade(int companyID) {
-        super();
         this.companyID = companyID;
     }
 
@@ -22,6 +21,16 @@ public class CompanyFacade extends ClientFacade{
     @Override
     public boolean login(String email, String password) {
         return companiesDAO.isCompanyExists(email, password);
+    }
+
+    public int getIdThroughLogin(String email, String password){
+        int id = 0;
+        for (Company company:companiesDAO.getAllCompanies()){
+            if (company.getEmail().equals(email) && company.getPassword().equals(password)){
+               id = company.getId();
+            }
+        }
+        return id;
     }
 
     public void addCoupon(Coupon coupon){

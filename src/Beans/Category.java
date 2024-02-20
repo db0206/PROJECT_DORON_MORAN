@@ -12,7 +12,7 @@ public enum Category {
         return id;
     }
 
-    private Category (int id){
+    Category(int id){
         this.id =id;
     }
 

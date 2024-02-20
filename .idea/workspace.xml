@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="ADD Coupon, Add Customer, ADD COMPANY">
-      <change afterPath="$PROJECT_DIR$/src/Facade/ClientFacade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Facade/CompanyFacade.java" afterDir="false" />
+    <list default="true" id="3333e455-3e7e-413a-996d-563b5aab2e8b" name="Changes" comment="end of DAO, start of Facade">
+      <change afterPath="$PROJECT_DIR$/src/Login/ClientType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Login/LoginManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CompaniesDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CouponsDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/CustomersDBDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/Tester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Beans/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Beans/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/ConnectionPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -149,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708183900771</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="end of DAO, start of Facade">
+      <option name="closed" value="true" />
+      <created>1708376798000</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708376798000</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,6 +172,7 @@
     <MESSAGE value="NOTES" />
     <MESSAGE value="TeamUpdate" />
     <MESSAGE value="ADD Coupon, Add Customer, ADD COMPANY" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD Coupon, Add Customer, ADD COMPANY" />
+    <MESSAGE value="end of DAO, start of Facade" />
+    <option name="LAST_COMMIT_MESSAGE" value="end of DAO, start of Facade" />
   </component>
 </project>

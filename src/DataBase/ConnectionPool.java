@@ -8,7 +8,7 @@ import java.util.Stack;
 public class ConnectionPool {
 
     private static final int NUMBER_OF_CONNECTIONS = 10;
-    public static ConnectionPool instance = null;
+    private static ConnectionPool instance = null;
     private final Stack<Connection> connections = new Stack<>();
 
     private ConnectionPool() throws SQLException {
